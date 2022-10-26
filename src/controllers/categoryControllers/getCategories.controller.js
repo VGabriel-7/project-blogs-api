@@ -1,11 +1,11 @@
-const serviceUser = require('../../services');
+const serviceCategory = require('../../services');
 
 const HTTP_STATUS_OK = 200;
 const HTTP_INTERNAL_SERVER_ERROR = 500;
 
-const getUsers = async (_req, res) => {
+const getCategories = async (_req, res) => {
   try {
-    const users = await serviceUser.findAllUsers();
+    const users = await serviceCategory.findAllCategories();
 
     res.status(HTTP_STATUS_OK).json(users);
   } catch (error) {
@@ -13,4 +13,4 @@ const getUsers = async (_req, res) => {
   }
 };
 
-module.exports = { getUsers };
+module.exports = { getCategories };

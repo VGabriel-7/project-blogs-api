@@ -11,13 +11,13 @@ const insert = ({ displayName, email, password, image }) => {
 
 const validateEmail = async (email) => User.findOne({ where: { email } });
 
-const findAll = () => User.findAll({ attributes: { exclude: ['password'] } });
+const findAllUsers = () => User.findAll({ attributes: { exclude: ['password'] } });
 
 const findUser = (id) => User.findByPk(id, { attributes: { exclude: ['password'] } });
 
 module.exports = {
   insert,
   validateEmail,
-  findAll,
+  findAllUsers,
   findUser,
 };

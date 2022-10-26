@@ -3,19 +3,21 @@ const { validateLogin } = require('./login.service');
 const {
   insert,
   validateEmail,
-  findAll,
+  findAllUsers,
   findUser,
 } = require('./user.service');
 
 const {
   insertCategory,
+  findAllCategories,
 } = require('./category.service');
 
 module.exports = {
   validateLogin,
   validateEmail,
   insert,
-  findAll,
+  findAllUsers,
   findUser,
   insertCategory,
+  findAllCategories,
 };
