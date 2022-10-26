@@ -1,5 +1,5 @@
-const userService = require('../services');
-const { createToken } = require('../utils');
+const userService = require('../../services');
+const { createToken } = require('../../utils');
 
 const HTTP_CREATED = 201;
 const HTTP_CONFLICT = 409;

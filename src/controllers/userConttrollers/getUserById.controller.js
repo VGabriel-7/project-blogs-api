@@ -1,4 +1,4 @@
-const serviceUser = require('../services');
+const serviceUser = require('../../services');
 
 const HTTP_STATUS_OK = 200;
 const HTTP_NOT_FOUND = 404;

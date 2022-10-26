@@ -1,13 +1,15 @@
-const {
-  validateLogin,
-} = require('./loginServices');
+const { validateLogin } = require('./login.service');
 
 const {
   insert,
   validateEmail,
   findAll,
   findUser,
-} = require('./userServices');
+} = require('./user.service');
+
+const {
+  insertCategory,
+} = require('./category.service');
 
 module.exports = {
   validateLogin,
@@ -15,4 +17,5 @@ module.exports = {
   insert,
   findAll,
   findUser,
+  insertCategory,
 };

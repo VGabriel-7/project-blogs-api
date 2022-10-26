@@ -1,5 +1,5 @@
-const serviceUser = require('../services');
-const { createToken } = require('../utils');
+const serviceUser = require('../../services');
+const { createToken } = require('../../utils');
 
 const HTTP_BAD_REQUEST = 400;
 const HTTP_STATUS_OK = 200;
