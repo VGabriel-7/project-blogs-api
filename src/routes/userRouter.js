@@ -1,7 +1,9 @@
 const router = require('express').Router();
-const { insertUser } = require('../controllers');
-const { validateBodyInclusion } = require('../middlewares');
+const { insertUser, getUsers } = require('../controllers');
+const { validateBodyInclusion, validateToken } = require('../middlewares');
 
 router.post('/', validateBodyInclusion, insertUser);
+
+router.get('/', validateToken, getUsers);
 
 module.exports = router;
