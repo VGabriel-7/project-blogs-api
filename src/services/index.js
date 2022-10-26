@@ -6,6 +6,7 @@ const {
   insert,
   validateEmail,
   findAll,
+  findUser,
 } = require('./userServices');
 
 module.exports = {
@@ -13,4 +14,5 @@ module.exports = {
   validateEmail,
   insert,
   findAll,
+  findUser,
 };

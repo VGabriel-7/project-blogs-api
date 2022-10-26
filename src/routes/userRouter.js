@@ -1,9 +1,13 @@
 const router = require('express').Router();
-const { insertUser, getUsers } = require('../controllers');
+const { insertUser, getUsers, getUserById } = require('../controllers');
 const { validateBodyInclusion, validateToken } = require('../middlewares');
 
 router.post('/', validateBodyInclusion, insertUser);
 
-router.get('/', validateToken, getUsers);
+router.use(validateToken);
+
+router.get('/', getUsers);
+
+router.get('/:id', getUserById);
 
 module.exports = router;
