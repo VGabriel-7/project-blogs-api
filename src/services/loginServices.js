@@ -6,6 +6,7 @@ const validateLogin = async (email, password) => {
       email,
       password,
     },
+    attributes: { exclude: ['password'] },
   });
 
   return dataUser;
