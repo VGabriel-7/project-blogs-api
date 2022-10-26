@@ -12,6 +12,11 @@ const {
   findAllCategories,
 } = require('./category.service');
 
+const {
+  insertPost,
+  findByIdCategories,
+} = require('./blogPost.service');
+
 module.exports = {
   validateLogin,
   validateEmail,
@@ -20,4 +25,6 @@ module.exports = {
   findUser,
   insertCategory,
   findAllCategories,
+  insertPost,
+  findByIdCategories,
 };

@@ -8,8 +8,11 @@ const validateToken = (req, res, next) => {
   if (!authorization) {
     return res.status(HTTP_UNAUTHORIZED).json({ message: 'Token not found' });
   }
+  
   try {
-    Jwt.validateToken(authorization);
+    const jwt = Jwt.validateToken(authorization);
+
+    req.id = jwt.id;
 
     next();
   } catch ({ message }) {
