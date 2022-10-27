@@ -2,6 +2,7 @@ const { generateTokenLogin } = require('./loginControllers/generateTokenLogin.co
 const { insertUser } = require('./userConttrollers/insertUser.controller');
 const { getUsers } = require('./userConttrollers/getUsers.controller');
 const { getUserById } = require('./userConttrollers/getUserById.controller');
+const { deleteMe } = require('./userConttrollers/deleteMe.controller');
 const { insertCategory } = require('./categoryControllers/insertCategory.controller');
 const { getCategories } = require('./categoryControllers/getCategories.controller');
 const { insertPost } = require('./blogPostControllers/insertBlogPost.controller');
@@ -22,4 +23,5 @@ module.exports = {
   getPostById,
   updatePost,
   deletePost,
+  deleteMe,
 };

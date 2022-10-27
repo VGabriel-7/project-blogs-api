@@ -15,9 +15,12 @@ const findAllUsers = () => User.findAll({ attributes: { exclude: ['password'] } 
 
 const findUser = (id) => User.findByPk(id, { attributes: { exclude: ['password'] } });
 
+const deleteMe = (id) => User.destroy({ where: { id } });
+
 module.exports = {
   insert,
   validateEmail,
   findAllUsers,
   findUser,
+  deleteMe,
 };

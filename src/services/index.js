@@ -5,6 +5,7 @@ const {
   validateEmail,
   findAllUsers,
   findUser,
+  deleteMe,
 } = require('./user.service');
 
 const {
@@ -35,4 +36,5 @@ module.exports = {
   getPostById,
   updatePost,
   deletePost,
+  deleteMe,
 };
