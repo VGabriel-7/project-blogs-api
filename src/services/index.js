@@ -15,6 +15,7 @@ const {
 const {
   insertPost,
   findByIdCategories,
+  getAllPost,
 } = require('./blogPost.service');
 
 module.exports = {
@@ -27,4 +28,5 @@ module.exports = {
   findAllCategories,
   insertPost,
   findByIdCategories,
+  getAllPost,
 };

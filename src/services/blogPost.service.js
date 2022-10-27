@@ -1,6 +1,6 @@
 require('dotenv/config');
 const Sequelize = require('sequelize');
-const { BlogPost, PostCategory, Category } = require('../models');
+const { BlogPost, PostCategory, Category, User } = require('../models');
 const config = require('../config/config');
 
 const env = process.env.NODE_ENV || 'development';
@@ -30,7 +30,19 @@ const insertPost = async ({ title, content, categoryIds, id }) => {
   }
 };
 
+const getAllPost = async () => {
+  const posts = await BlogPost.findAll({
+    include: [
+      { model: User, as: 'user', attributes: { exclude: ['password'] } },
+      { model: Category, as: 'categories' },
+    ],
+  });
+
+  return posts;
+};
+
 module.exports = {
   insertPost,
   findByIdCategories,
+  getAllPost,
 };
