@@ -6,6 +6,7 @@ const { insertCategory } = require('./categoryControllers/insertCategory.control
 const { getCategories } = require('./categoryControllers/getCategories.controller');
 const { insertPost } = require('./blogPostControllers/insertBlogPost.controller');
 const { getPosts } = require('./blogPostControllers/getPosts.controller');
+const { getPostById } = require('./blogPostControllers/getPostById.controller');
 
 module.exports = {
   generateTokenLogin,
@@ -16,4 +17,5 @@ module.exports = {
   getCategories,
   insertPost,
   getPosts,
+  getPostById,
 };
