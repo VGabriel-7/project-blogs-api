@@ -4,6 +4,7 @@ const validateToken = require('./validateToken');
 const validateName = require('./validateName');
 const validateBodyInclusionPost = require('./validateBodyInclusionPost');
 const validateBodyUpdatePost = require('./validateBodyUpdatePost');
+const { checkPostOwner, checkPostExists } = require('./checkPost');
 
 module.exports = {
   validateBodyLogin,
@@ -12,4 +13,6 @@ module.exports = {
   validateName,
   validateBodyInclusionPost,
   validateBodyUpdatePost,
+  checkPostOwner,
+  checkPostExists,
 };

@@ -1,9 +1,17 @@
 const router = require('express').Router();
-const { insertPost, getPosts, getPostById, updatePost } = require('../controllers');
+const {
+  insertPost,
+  getPosts,
+  getPostById,
+  updatePost,
+  deletePost,
+} = require('../controllers');
 const {
   validateBodyInclusionPost,
   validateToken,
-  validateBodyUpdatePost } = require('../middlewares');
+  validateBodyUpdatePost, 
+  checkPostOwner,
+  checkPostExists } = require('../middlewares');
 
 router.use(validateToken);
 
@@ -13,6 +21,8 @@ router.get('/', getPosts);
 
 router.get('/:id', getPostById);
 
-router.put('/:id', validateBodyUpdatePost, updatePost);
+router.put('/:id', validateBodyUpdatePost, checkPostOwner, updatePost);
+
+router.delete('/:id', validateToken, checkPostExists, checkPostOwner, deletePost);
 
 module.exports = router;

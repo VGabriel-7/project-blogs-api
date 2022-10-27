@@ -18,6 +18,7 @@ const {
   getAllPost,
   getPostById,
   updatePost,
+  deletePost,
 } = require('./blogPost.service');
 
 module.exports = {
@@ -33,4 +34,5 @@ module.exports = {
   getAllPost,
   getPostById,
   updatePost,
+  deletePost,
 };
