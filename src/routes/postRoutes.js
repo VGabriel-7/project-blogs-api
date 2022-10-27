@@ -5,6 +5,7 @@ const {
   getPostById,
   updatePost,
   deletePost,
+  getPostsByQuery,
 } = require('../controllers');
 const {
   validateBodyInclusionPost,
@@ -18,6 +19,8 @@ router.use(validateToken);
 router.post('/', validateBodyInclusionPost, insertPost);
 
 router.get('/', getPosts);
+
+router.get('/search', getPostsByQuery);
 
 router.get('/:id', getPostById);
 

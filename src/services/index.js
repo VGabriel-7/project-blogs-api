@@ -20,6 +20,7 @@ const {
   getPostById,
   updatePost,
   deletePost,
+  getPostsByQuery,
 } = require('./blogPost.service');
 
 module.exports = {
@@ -37,4 +38,5 @@ module.exports = {
   updatePost,
   deletePost,
   deleteMe,
+  getPostsByQuery,
 };

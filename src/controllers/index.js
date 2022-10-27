@@ -10,6 +10,7 @@ const { getPosts } = require('./blogPostControllers/getPosts.controller');
 const { getPostById } = require('./blogPostControllers/getPostById.controller');
 const { updatePost } = require('./blogPostControllers/updatePost.controller');
 const { deletePost } = require('./blogPostControllers/deletePost.controller');
+const { getPostsByQuery } = require('./blogPostControllers/getPostsByQuery.controller');
 
 module.exports = {
   generateTokenLogin,
@@ -24,4 +25,5 @@ module.exports = {
   updatePost,
   deletePost,
   deleteMe,
+  getPostsByQuery,
 };
